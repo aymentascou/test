@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+{% block title %}
+    <title></title>
+{% endblock %}
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+{% stylesheets 'bundles/acmedemo/css/BrightSide.css' filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+</head>
+<body>
+<div id="wrap">
+  <div id="header">
+<div id="menu">
+</div>
+      <h1 id="logo"><span class="green">www.hightech.net</span><span class="gray"></span></h1>
+    <form method="post" class="searchform" action="">
+      <p>
+        <input type="text" name="search_query" class="textbox" />
+        <input type="submit" name="search" class="button" value="Chercher" />
+      </p>
+    </form>
+    <ul>
+      <li id="current"><a href=""><span>Acceull</span></a></li>
+      <li><a href=""><span>infos</span></a></li>
+      <li><a href=""><span>articles</span></a></li>
+      <li><a href="{{ path('contact') }}"><span>contact</span></a></li>
+      <li><a href="{{ path('apropos') }}"><span>Apropos</span></a></li>
+    </ul>
+  </div>
+  <div id="content-wrap"> 
+    <img src={{ image('images/hi-tech-wallpaper.jpg') }} width="820" height="230" alt="headerphoto" class="no-border" />
+    <div id="infos-barre">
+        <marquee direction="left">Bienvenu :</marquee>
+    </div>
+    <div id="sidebar" >
+      <h1>Menu</h1>
+      <ul class="sidemenu">
+        <li><a href="">Page d'acceuille </a></li>
+        <li><a href="#TemplateInfo">Les infos</a></li>
+        <li><a href="#SampleTags">Les articles </a></li>
+        <li><a href="{{ path('contact') }}">Nous contacter </a></li>
+        <li><a href="{{ path('apropos') }}">A propos </a></li>
+      </ul>
+      <h1>Liens utiles</h1>
+      <ul class="sidemenu">
+        <li><a href="">lien1</a></li>
+        <li><a href="">lien2</a></li>
+        <li><a href="">lien3</a></li>
+      </ul>
+    </div>
+    <div id="main">
+        {% block main %}
+        {% endblock main %}
+    </div>
+    <div id="rightbar">
+    
+    {{ render(controller('AcmeDemoBundle:Security:login')) }}
+
+{#
+      <form id="form1" method="post" action="">
+        <p>
+          Nom utilisateur : <br />
+          <input class="text" type="text" name="textfield" />
+        </p>
+        <p>Mot de passe :
+		  <input class="text" type="password" name="textfield2" />
+		  <br/>
+	    </p>
+        <p><br/>
+          <center><input class="button" type="submit" /></center>
+        </p>
+        <center><a href="{{ path('inscription') }}">Inscription</a></center>
+		<center><a href="">Mot de passe oublié</a></center>
+      </form>
+#}
+      <p>&nbsp; </p>
+      <p><!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+	  </p>
+    </div>
+  </div>
+  <div id="footer">
+    <div class="footer-left">
+      <p class="align-left">&nbsp;</p>
+    </div>
+    <div class="footer-right">
+      <p class="align-right">&copy; 2014 <strong>www.hightech.net</strong></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

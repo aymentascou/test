@@ -1,0 +1,37 @@
+{% extends 'AcmeDemoBundle::base.html.twig' %}
+
+{% block main -%}
+    <h1>Créer une compte :</h1>
+    
+    <form action="{{ path('user_create') }}" method="post" {{ form_enctype(form) }}>
+    
+        <br/>
+        <span class="green">Nom d'utilisateur :</span>
+        <br/>{{ form_widget(form.username, {'attr': {'style': 'width:150px;', 'class':'text'}}) }} <br/>
+    
+        <br/>
+        <span class="green">Email :</span>
+        <br/>{{ form_widget(form.email, {'attr': {'style': 'width:150px;', 'class':'text'}}) }} <br/>
+
+        <br/>
+        <span class="green">Date de naissance :</span>
+        <br/>{{ form_widget(form.date) }} <br/>
+    
+        <br/>
+        <span class="green">Mot de passe :</span>
+        <br/>{{ form_widget(form.password, {'attr': {'style': 'width:150px;','class':'text','type':'password'}}) }} <br/>
+    
+        <br/>
+        <span class="green">Confirmer Mot de passe :</span>
+        <br/>{{ form_widget(form.password2, {'attr': {'style': 'width:150px;','class':'text','type':'password'}}) }} <br/>
+    
+        <br/>
+
+        <input type="submit" value="Creer" class="button"/>
+        
+        <br/>
+        
+        {{ form_rest(form) }}
+    
+    </form>
+{% endblock main %}

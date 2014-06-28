@@ -1,0 +1,22 @@
+{% extends "AcmeDemoBundle::base.html.twig" %}
+
+{% block main %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+<form action="{{ path('envoimotdepasseoubliee') }}" method="POST">
+    <h2>Mot de passe oublier :</h2>
+    <div>
+        <label for="username">{{ 'resetting.request.username'|trans }}</label>
+        <input type="text" id="username" name="username" required="required" />
+    </div>
+    <br/>
+    <div>
+        <input type="submit" value="{{ 'resetting.request.submit'|trans }}" />
+    </div>
+    {% if invalid_username is defined %}
+            <p style="color:red">{{ 'resetting.request.invalid_username'|trans({'%username%': invalid_username}) }}</p>
+    {% endif %}
+</form>
+
+{% endblock main %}

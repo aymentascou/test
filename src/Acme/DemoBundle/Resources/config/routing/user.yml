@@ -1,0 +1,32 @@
+user:
+    pattern:  /
+    defaults: { _controller: "AcmeDemoBundle:User:index" }
+
+user_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "AcmeDemoBundle:User:show" }
+
+user_new:
+    pattern:  /new
+    defaults: { _controller: "AcmeDemoBundle:User:new" }
+
+user_create:
+    pattern:  /create
+    defaults:
+        _controller: "AcmeDemoBundle:User:create"
+    requirements:
+        _method: POST
+
+user_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "AcmeDemoBundle:User:edit" }
+
+user_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "AcmeDemoBundle:User:update" }
+    requirements: { _method: post|put }
+
+user_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "AcmeDemoBundle:User:delete" }
+    requirements: { _method: post|delete }

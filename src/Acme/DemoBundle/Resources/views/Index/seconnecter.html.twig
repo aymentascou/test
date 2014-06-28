@@ -1,0 +1,50 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div>
+    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+        <form>
+            <center>{{ 'layout.logged_in_as'|trans({}, 'FOSUserBundle') }}</center>
+                <center>
+                <h1>
+                    {{ app.user.username }}
+                </h1>
+                </center>
+                <center>
+                <a href="{{ path('fos_user_security_logout') }}">
+                    {{ 'layout.logout'|trans({}, 'FOSUserBundle') }} 
+                </a>
+                </center>
+        </form>
+    {% endif %}
+    {#
+        <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+    #}
+</div>
+
+{% if not is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+<form action="{{ path("fos_user_security_check") }}" method="post">
+    <h1>Se connecter</h1>
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+
+    <label for="username">{{ 'security.login.username'|trans }}</label>
+    <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
+
+    <label for="password">{{ 'security.login.password'|trans }}</label>
+    <input type="password" id="password" name="_password" required="required" />
+    
+    <br/>
+    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+    <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+
+    <center><input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" /></center>
+    <br/><br/>
+    <center><a href="{{ path('motdepasseoubliee') }}">mot de passe oubliee</a></center>
+    <br/>
+    <center><a href="{{ path('inscription') }}">Inscription</a></center>
+    <br/><br/>
+
+    {% if error %}
+        <div style="color:red;border:1px;">{{ error|trans }}</div>
+    {% endif %}
+</form>
+{% endif %}

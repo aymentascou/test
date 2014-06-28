@@ -1,0 +1,9 @@
+{% extends "AcmeDemoBundle::base.html.twig" %}
+
+{% block main %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+<form>
+    <p>{{ 'resetting.password_already_requested'|trans }}</p>
+</form>
+{% endblock main %}

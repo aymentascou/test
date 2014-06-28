@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
+        <file>file:/C:/easy/www/project/src/Acme/DemoBundle/Controller/IndexController.php</file>
+        <file>file:/C:/easy/www/project/app/config/config.yml</file>
+        <file>file:/C:/easy/www/project/app/config/security.yml</file>
+        <file>file:/C:/easy/www/project/composer.json</file>
+        <file>file:/C:/easy/www/project/app/AppKernel.php</file>
+        <file>file:/C:/easy/www/project/src/Acme/DemoBundle/Entity/User.php</file>
+        <file>file:/C:/easy/www/project/src/Acme/DemoBundle/EventListener/EmailConfirmationListener.php</file>
+        <file>file:/C:/easy/www/project/src/Acme/DemoBundle/Controller/ContactController.php</file>
+        <file>file:/C:/easy/www/project/src/Acme/DemoBundle/Resources/config/services.xml</file>
+        <file>file:/C:/easy/www/project/src/Acme/DemoBundle/EventListener/ControllerListener.php</file>
+        <file>file:/C:/easy/www/project/src/Acme/DemoBundle/Resources/views/Index/apropos.html.twig</file>
+        <file>file:/C:/easy/www/project/vendor/mremi/contact-bundle/Mremi/ContactBundle/Resources/translations/MremiContactBundle.fr.xliff</file>
+        <file>file:/C:/easy/www/project/src/Acme/DemoBundle/Controller/RegistrationController.php</file>
+        <file>file:/C:/easy/www/project/app/config/routing.yml</file>
+        <file>file:/C:/easy/www/project/src/Acme/DemoBundle/Resources/views/Index/inscription.html.twig</file>
+        <file>file:/C:/easy/www/project/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.fr.yml</file>
+        <file>file:/C:/easy/www/project/src/Acme/DemoBundle/Resources/translations/AcmeDemoBundle.fr.yml</file>
+        <file>file:/C:/easy/www/project/src/Acme/DemoBundle/Resources/config/routing.yml</file>
+        <file>file:/C:/easy/www/project/src/Acme/DemoBundle/Resources/views/Index/confirmation.html.twig</file>
+        <file>file:/C:/easy/www/project/src/Acme/DemoBundle/Resources/views/base.html.twig</file>
+        <file>file:/C:/easy/www/project/src/Acme/DemoBundle/Entity/Article.php</file>
+        <file>file:/C:/easy/www/project/src/Acme/DemoBundle/Controller/UserController.php</file>
+        <file>file:/C:/easy/www/project/src/Acme/DemoBundle/Form/UserType.php</file>
+        <file>file:/C:/easy/www/project/src/Acme/DemoBundle/Entity/Contact.php</file>
+        <file>file:/C:/easy/www/project/src/Acme/DemoBundle/Resources/views/Index/contact.html.twig</file>
+        <file>file:/C:/easy/www/project/vendor/egeloen/google-map-bundle/Ivory/GoogleMapBundle/Entity/Map.php</file>
+        <file>file:/C:/easy/www/project/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Controller/SecurityController.php</file>
+        <file>file:/C:/easy/www/project/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/security.xml</file>
+        <file>file:/C:/easy/www/project/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/routing/security.xml</file>
+    </open-files>
+</project-private>

@@ -1,0 +1,17 @@
+{% extends "AcmeDemoBundle::base.html.twig" %}
+
+{% block main %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% trans_default_domain 'MremiContactBundle' %}
+
+<form>
+    <section>
+        <h3>{{ 'mremi_contact.confirm_title'|trans({'%title%': contact.titleValue|trans,'%fullName%': contact.fullName}) }}</h3>
+    </section>
+
+    <p>{{ 'mremi_contact.confirm_message'|trans }}</p>
+</form>
+
+{% endblock main %}

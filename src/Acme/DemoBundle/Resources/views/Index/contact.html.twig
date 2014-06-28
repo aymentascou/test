@@ -1,0 +1,19 @@
+{% extends "AcmeDemoBundle::base.html.twig" %}
+
+{% block main %}
+
+{% trans_default_domain 'MremiContactBundle' %}
+
+{% form_theme form 'MremiContactBundle:Contact:bootstrap_form_theme.html.twig' %}
+    
+    {{ form_start(form, {'action': path('contact')}) }}
+
+            <h2>{{ 'mremi_contact.form_title'|trans }}</h2>
+            
+            {{ form_widget(form) }}
+
+            {{ form_end(form) }}
+            
+            {{ tinymce_init() }}
+          
+{% endblock main %}

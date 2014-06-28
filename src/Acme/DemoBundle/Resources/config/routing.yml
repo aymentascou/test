@@ -1,0 +1,70 @@
+#project/src/Acme/DemoBundle/Resources/config/routing.yml
+
+acmedemobundle_user:
+    resource: "@AcmeDemoBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+    
+inscription:
+    pattern:  /inscription.{_format}
+    defaults:
+        _controller: "AcmeDemoBundle:Registration:register"
+        _format: html
+    requirements:
+        _method: GET
+        _format: html
+        
+apropos:
+    pattern:  /apropos
+    defaults:
+        _controller: "AcmeDemoBundle:Index:apropos"
+    requirements:
+        _method: GET
+
+root:
+    pattern: /
+    defaults:
+        _controller: FrameworkBundle:Redirect:urlRedirect
+        path: /contact
+        permanent: true
+
+motdepasseoubliee:
+    pattern: /motdepasseoubliee
+    defaults:
+        _controller: AcmeDemoBundle:Resetting:request
+    requirements:
+        _method: GET
+
+envoimotdepasseoubliee:
+    pattern: /envoimotdepasseoubliee
+    defaults:
+        _controller: AcmeDemoBundle:Resetting:sendEmail
+    requirements:
+        _method: POST
+
+contact:
+    pattern: /contact
+    defaults:
+        _controller: acmedemo_contact.contact_controller:indexAction
+    requirements:
+        _method: GET|POST
+
+contact_confirmation:
+    pattern: /contact_confirmation
+    defaults:
+        _controller: acmedemo_contact.contact_controller:confirmAction
+    requirements:
+        _method: POST|GET
+        
+setlanguage:
+    pattern: /language/{_locale}
+    defaults:
+        _controller: AcmeDemoBundle:Index:setlanguage
+    requirements:
+        _method: GET
+        
+request:
+    pattern: /request
+    defaults:
+        _controller: AcmeDemoBundle:Index:request
+    requirements:
+        _method: GET|POST|PUT|DELETE
