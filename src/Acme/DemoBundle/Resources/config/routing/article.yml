@@ -1,0 +1,30 @@
+article:
+    path:     /
+    defaults: { _controller: "AcmeDemoBundle:Article:index" }
+
+article_show:
+    path:     /{id}/show
+    defaults: { _controller: "AcmeDemoBundle:Article:show" }
+
+article_new:
+    path:     /new
+    defaults: { _controller: "AcmeDemoBundle:Article:new" }
+
+article_create:
+    path:     /create
+    defaults: { _controller: "AcmeDemoBundle:Article:create" }
+    requirements: { _method: post }
+
+article_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AcmeDemoBundle:Article:edit" }
+
+article_update:
+    path:     /{id}/update
+    defaults: { _controller: "AcmeDemoBundle:Article:update" }
+    requirements: { _method: post|put }
+
+article_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AcmeDemoBundle:Article:delete" }
+    requirements: { _method: post|delete }

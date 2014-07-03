@@ -13,6 +13,8 @@ use Acme\DemoBundle\Entity\Contact;
 use Ivory\GoogleMap\Overlays\Animation;
 use Ivory\GoogleMap\Overlays\Marker;
 
+use Acme\DemoBundle\Entity\Article;
+use Acme\DemoBundle\Entity\Commentaire;
 /**
  * Index controller.
  *
@@ -65,16 +67,23 @@ class IndexController extends Controller
     /**
      * 
      */
-    public function requestAction()
+    public function indexAction()
     {
-        //$request = Request::create('https://wallet.paysera.com/rest/v1/server', 'GET', array()) ;
+        /*
+        $article = new Article();
         
-        //return new Response(var_dump($request));
+        $article->setTitre("titre1") ;
         
-        $browser = new Buzz\Browser();
-
-        $response = $browser->get('http://www.google.com');
+        $commentaire = new Commentaire();
         
-        return new Respnse($browser->getLastRequest());
+        $commentaire->setNom("comm1");
+        
+        $commentaire->setMsg("msg");
+        
+        $article->addCommentaire($commentaire);
+        
+        return new Response($article->getTitre());
+         * 
+         */
     }
 }

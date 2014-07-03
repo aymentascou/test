@@ -1,2 +1,11 @@
-## YAML Template.
-"Hello" : Bonjour
+
+aboutas : "Notre site web contient les nouveauté sur les technologie"
+ourposition : "Notre position :"
+
+home     : "Accueil"
+news     : "infos"
+article  : "article"
+contact  : "contact"
+about    : "A propos"
+
+link : "liens"

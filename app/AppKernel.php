@@ -28,6 +28,12 @@ class AppKernel extends Kernel
             new JMS\SerializerBundle\JMSSerializerBundle(),
             new Ivory\GoogleMapBundle\IvoryGoogleMapBundle(),
             new Sensio\Bundle\BuzzBundle\SensioBuzzBundle(),
+            new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
+            new Sonata\CoreBundle\SonataCoreBundle(),
+            new Sonata\BlockBundle\SonataBlockBundle(),
+            new Sonata\jQueryBundle\SonatajQueryBundle(),
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new Sonata\AdminBundle\SonataAdminBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test', 'prod'))) {

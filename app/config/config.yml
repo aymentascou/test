@@ -219,3 +219,11 @@ ivory_google_map:
 
         # google map Api language, default en
         language: fr
+        
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        # Enable the SonataAdminBundle block
+        sonata.admin.block.admin_list:
+            contexts:   [admin]
+        # Your other blocks

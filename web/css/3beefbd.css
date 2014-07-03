@@ -23,6 +23,19 @@ body {
 	text-align: center;
 }
 
+#header #drapeaux {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	left: 30px;
+	top: 15px;
+        background-color: #FFFFFF;
+}
+
+#header #drapeaux a {
+    color: #FFFFFF;
+}
+
 #infos-barre {
     background-color: #FAFAFA;
     font-family: cursive;
@@ -64,7 +77,7 @@ ul span, ol span {
 
 /* images */
 img {
-	border: 2px solid #CCC;
+	border: 0px solid #CCC;
 }
 img.no-border {
 	border: none;
@@ -197,7 +210,8 @@ form.searchform input.button {
 ************************/
 #wrap {
 	background: #FFF;
-	width: 820px; height: 100%;
+	width: 1000px; 
+        height: 100%;
 	margin: 0 auto;	
 	text-align: left;
 }
@@ -210,7 +224,7 @@ form.searchform input.button {
 /* header */
 #header {
 	position: relative;
-	height: 150px;	
+	height: 220px;	
 	background: #FFF;	
 }
 #header h1#logo {
@@ -221,9 +235,9 @@ form.searchform input.button {
 	letter-spacing: -2px;
 	text-transform: lowercase;
 	top: 0;
-	left: 20px;
-	top: 20px;
-	width: 144px;
+	left: 30px;
+	top: 35px;
+	width: 250px;
 }
 #header h2#slogan {
 	position: absolute;	 
@@ -235,8 +249,14 @@ form.searchform input.button {
 }
 #header form.searchform {
 	position: absolute;
-	top: 20px; 
-	right: -12px;	
+	top: 0px; 
+	right: 20px;
+        width: 240px;
+        height: 60px;
+        background-color: #FAFAFA;
+        border-width: 1px;
+        border-color: #CCC;
+        border-radius: 5px;
 }
 
 /* main */
@@ -343,7 +363,7 @@ form.searchform input.button {
 	position: absolute;
    margin:0; padding: 0;
    list-style:none;
-	right: 0; 
+	left: 0; 
 	bottom: 6px !important; bottom: 5px;
 	font: bold 13px  Arial, 'Trebuchet MS', Tahoma, verdana,  sans-serif;	
 }
@@ -351,13 +371,7 @@ form.searchform input.button {
    display:inline;
    margin:0; padding:0;
 }
-#header a {
-   float:left;
-   background: url(../../bundles/acmedemo/css/tableft.gif) no-repeat left top;
-   margin:0;
-   padding:0 0 0 4px;
-   text-decoration:none;
-}
+
 #header a span {
    float:left;
    display:block;
@@ -403,4 +417,149 @@ background-color:#000;
 opacity:0.8;
 height: 150px;
 color:#FFFFFF;
+}
+
+
+/*----------------------------
+	CSS3 Animated Navigation
+-----------------------------*/
+
+
+.fancyNav{
+	/* Affects the UL element */
+	overflow: hidden;
+	display: inline-block;
+}
+
+.fancyNav li{
+	/* Specifying a fallback color and we define CSS3 gradients for the major browsers: */
+	
+	background-color: #f0f0f0;
+	background-image: -webkit-gradient(linear,left top, left bottom,from(#fefefe), color-stop(0.5,#f0f0f0), color-stop(0.51, #e6e6e6));
+	background-image: -moz-linear-gradient(#fefefe 0%, #f0f0f0 50%, #e6e6e6 51%);
+	background-image: -o-linear-gradient(#fefefe 0%, #f0f0f0 50%, #e6e6e6 51%);
+	background-image: -ms-linear-gradient(#fefefe 0%, #f0f0f0 50%, #e6e6e6 51%);
+	background-image: linear-gradient(#fefefe 0%, #f0f0f0 50%, #e6e6e6 51%);
+	
+	border-right: 1px solid rgba(9, 9, 9, 0.125);
+	
+	/* Adding a 1px inset highlight for a more polished efect: */
+	
+	box-shadow: 1px -1px 0 rgba(255, 255, 255, 0.6) inset;
+	-moz-box-shadow: 1px -1px 0 rgba(255, 255, 255, 0.6) inset;
+	-webkit-box-shadow: 1px -1px 0 rgba(255, 255, 255, 0.6) inset;
+	
+	position:relative;
+	
+	float: left;
+	list-style: none;
+}
+
+.fancyNav li:after{
+
+	/* This creates a pseudo element inslide each LI */	
+	
+	content:'.';
+	text-indent:-9999px;
+	overflow:hidden;
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	z-index:1;
+	opacity:0;
+	
+	/* Gradients! */
+	
+	background-image:-webkit-gradient(linear, left top, right top, from(rgba(168,168,168,0.5)),color-stop(0.5,rgba(168,168,168,0)), to(rgba(168,168,168,0.5)));
+	background-image:-moz-linear-gradient(left, rgba(168,168,168,0.5), rgba(168,168,168,0) 50%, rgba(168,168,168,0.5));
+	background-image:-o-linear-gradient(left, rgba(168,168,168,0.5), rgba(168,168,168,0) 50%, rgba(168,168,168,0.5));
+	background-image:-ms-linear-gradient(left, rgba(168,168,168,0.5), rgba(168,168,168,0) 50%, rgba(168,168,168,0.5));
+	background-image:linear-gradient(left, rgba(168,168,168,0.5), rgba(168,168,168,0) 50%, rgba(168,168,168,0.5));
+	
+	/* Creating borders with box-shadow. Useful, as they don't affect the size of the element. */
+	
+	box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff,1px 0 0 #a3a3a3,2px 0 0 #fff;
+	-moz-box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff,1px 0 0 #a3a3a3,2px 0 0 #fff;
+	-webkit-box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff,1px 0 0 #a3a3a3,2px 0 0 #fff;
+	
+	/* This will create a smooth transition for the opacity property */
+	
+	-moz-transition:0.25s all;
+	-webkit-transition:0.25s all;
+	-o-transition:0.25s all;
+	transition:0.25s all;
+}
+
+/* Treating the first LI and li:after elements separately */
+
+.fancyNav li:first-child{
+	border-radius: 4px 0 0 4px;
+}
+
+.fancyNav li:first-child:after,
+.fancyNav li.selected:first-child:after{
+	box-shadow:1px 0 0 #a3a3a3,2px 0 0 #fff;
+	-moz-box-shadow:1px 0 0 #a3a3a3,2px 0 0 #fff;
+	-webkit-box-shadow:1px 0 0 #a3a3a3,2px 0 0 #fff;
+	
+	border-radius:4px 0 0 4px;
+}
+
+.fancyNav li:last-child{
+	border-radius: 0 4px 4px 0;
+}
+
+/* Treating the last LI and li:after elements separately */
+
+.fancyNav li:last-child:after,
+.fancyNav li.selected:last-child:after{
+	box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff;
+	-moz-box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff;
+	-webkit-box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff;
+	
+	border-radius:0 4px 4px 0;
+}
+
+.fancyNav li:hover:after,
+.fancyNav li.selected:after,
+.fancyNav li:target:after{
+	/* This property triggers the CSS3 transition */
+	opacity:1;
+}
+
+.fancyNav:hover li.selected:after,
+.fancyNav:hover li:target:after{
+	/* Hides the targeted li when we are hovering on the UL */
+	opacity:0;
+}
+
+.fancyNav li.selected:hover:after,
+.fancyNav li:target:hover:after{
+	opacity:1 !important;
+}
+
+/* Styling the anchor elements */
+
+.fancyNav li a{
+	color: #5d5d5d;
+	display: inline-block;
+	font: 20px/1 Lobster,Arial,sans-serif;
+	padding: 12px 35px 14px;
+	position: relative;
+	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.6);
+	z-index:2;
+	text-decoration:none !important;
+	white-space:nowrap;
+}
+
+.fancyNav a.homeIcon{
+	background:url('../../bundles/acmedemo/images/home.png') no-repeat center center;
+	display: block;
+	overflow: hidden;
+	padding-left: 12px;
+	padding-right: 12px;
+	text-indent: -9999px;
+	width: 16px;
 }

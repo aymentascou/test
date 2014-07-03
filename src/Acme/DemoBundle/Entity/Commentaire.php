@@ -44,8 +44,8 @@ class Commentaire
 
 
     /**
-     * @ORM\ManyToOne(targetEntity="Article", inversedBy="comments", cascade={"remove"})
-     * @ORM\JoinColumn(name="article_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Acme\DemoBundle\Entity\Article", inversedBy="Commentaire")
+     * @ORM\JoinColumn(name="article_commentaire", referencedColumnName="id")
      */
     private $article;
     
@@ -126,5 +126,28 @@ class Commentaire
     public function getMsg()
     {
         return $this->msg;
+    }
+
+    /**
+     * Set article
+     *
+     * @param \Acme\DemoBundle\Entity\Article $article
+     * @return Commentaire
+     */
+    public function setArticle(\Acme\DemoBundle\Entity\Article $article = null)
+    {
+        $this->article = $article;
+
+        return $this;
+    }
+
+    /**
+     * Get article
+     *
+     * @return \Acme\DemoBundle\Entity\Article 
+     */
+    public function getArticle()
+    {
+        return $this->article;
     }
 }

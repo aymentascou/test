@@ -51,11 +51,10 @@ class Article
     
     
     /**
-     * @ORM\OneToMany(targetEntity="Acme\DemoBundle\Entity\Commentaire", mappedBy="Desk", cascade={"remove", "persist"})
+     * @ORM\OneToMany(targetEntity="Acme\DemoBundle\Entity\Commentaire", mappedBy="article", cascade={"remove", "persist"})
      */
     private $commentaires;
-
-
+    
     /**
      * Get id
      *
@@ -156,5 +155,54 @@ class Article
     public function getContenu()
     {
         return $this->contenu;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->commentaires = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add commentaires
+     *
+     * @param \Acme\DemoBundle\Entity\Commentaire $commentaires
+     * @return Article
+     */
+    public function addCommentaire(\Acme\DemoBundle\Entity\Commentaire $commentaires)
+    {
+        $this->commentaires[] = $commentaires;
+
+        return $this;
+    }
+
+    /**
+     * Remove commentaires
+     *
+     * @param \Acme\DemoBundle\Entity\Commentaire $commentaires
+     */
+    public function removeCommentaire(\Acme\DemoBundle\Entity\Commentaire $commentaires)
+    {
+        $this->commentaires->removeElement($commentaires);
+    }
+
+    /**
+     * Get commentaires
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getCommentaires()
+    {
+        return $this->commentaires;
+    }
+    
+    /**
+     * 
+     * @return type
+     */
+    public function __toString() 
+    {
+        return $this->titre;
     }
 }

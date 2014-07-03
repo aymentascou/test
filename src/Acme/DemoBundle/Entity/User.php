@@ -23,7 +23,11 @@ class User extends BaseUser
      */
     private $date;
 
-
+    /**
+     * @var type 
+     */
+    public $articles;
+    
     public function __construct()
     {
         parent::__construct();

@@ -1,5 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+{% trans_default_domain 'AcmeDemoBundle' %}
+{% set _locale = app.request.locale %}
+{% set _route  = app.request.attributes.get('_route') %}
+
 <head>
 {% block title %}
     <title></title>
@@ -11,48 +15,52 @@
 {% endstylesheets %}
 
 <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster" />
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 </head>
 <body>
 <div id="wrap">
   <div id="header">
-<div id="menu">
+<div id="drapeaux">
+    <a href="{{ path(_route, {'_locale': 'en'}) }}"><img width="40px" height="20px" src="http://engees-fresqueau.unistra.fr/drapeau/drapeaua.jpg"></img></a>
+    <a href="{{ path(_route, {'_locale': 'fr'}) }}"><img width="40px" height="20px" src="http://croc.campus.ecp.fr/french.jpg"></img></a>
 </div>
-      <h1 id="logo"><span class="green">www.hightech.net</span><span class="gray"></span></h1>
+          <h1 id="logo"><img width="400px" height="100px" src="{{ asset('bundles/acmedemo/images/logo-high-tech.jpg') }}"></img></h1>
     <form method="post" class="searchform" action="">
       <p>
-        <input type="text" name="search_query" class="textbox" />
-        <input type="submit" name="search" class="button" value="Chercher" />
+        <input type="text" name="search_query" />
+        <input type="submit" name="search" value="Chercher" />
       </p>
     </form>
-    <ul>
-      <li id="current"><a href=""><span>Acceull</span></a></li>
-      <li><a href=""><span>infos</span></a></li>
-      <li><a href=""><span>articles</span></a></li>
-      <li><a href="{{ path('contact') }}"><span>contact</span></a></li>
-      <li><a href="{{ path('apropos') }}"><span>Apropos</span></a></li>
-    </ul>
+        <nav>
+            <ul class="fancyNav">
+                <li id="home"><a href="#" class="homeIcon">{{ 'home'|trans }}</a></li>
+                <li id="home"><a href="#">{{ 'home'|trans }}</a></li>
+                <li id="news"><a href="#">{{ 'news'|trans }}</a></li>
+                <li id="article"><a href="#">{{ 'article'|trans }}</a></li>
+                <li id="about"><a href="{{ path('apropos', { '_locale': app.request.locale }) }}">{{ 'about'|trans }}</a></li>
+                <li id="contact"><a href="{{ path('contact', { '_locale': app.request.locale }) }}">{{ 'contact'|trans }}</a></li>
+            </ul>
+        </nav>
   </div>
   <div id="content-wrap"> 
-    <img src={{ image('images/hi-tech-wallpaper.jpg') }} width="820" height="230" alt="headerphoto" class="no-border" />
+    <img src={{ image('images/hi-tech-wallpaper.jpg') }} width="100%" height="230" alt="headerphoto" class="no-border" />
     <div id="infos-barre">
-        <marquee direction="left">Bienvenu :</marquee>
+        <marquee direction="left">FlashInfos : --- ;</marquee>
     </div>
-    <div id="sidebar" >
+    <div id="sidebar">
       <h1>Menu</h1>
       <ul class="sidemenu">
-        <li><a href="">Page d'acceuille </a></li>
-        <li><a href="#TemplateInfo">Les infos</a></li>
-        <li><a href="#SampleTags">Les articles </a></li>
-        <li><a href="{{ path('contact') }}">Nous contacter </a></li>
-        <li><a href="{{ path('apropos') }}">A propos </a></li>
+        <li><a href="#">{{ 'home'|trans }}</a></li>
+        <li><a href="#">{{ 'news'|trans }}</a></li>
+        <li><a href="#">{{ 'article'|trans }}</a></li>
+        <li><a href="{{ path('contact', { '_locale': app.request.locale }) }}">{{ 'contact'|trans }}</a></li>
+        <li><a href="{{ path('apropos', { '_locale': app.request.locale }) }}">{{ 'about'|trans }}</a></li>
       </ul>
-      <h1>Liens utiles</h1>
+      <h1>{{ 'link'|trans }}</h1>
       <ul class="sidemenu">
-        <li><a href="">lien1</a></li>
-        <li><a href="">lien2</a></li>
-        <li><a href="">lien3</a></li>
+        <li><a href="http://www.info-technology.tn/">InfosTech</a></li>
       </ul>
     </div>
     <div id="main">

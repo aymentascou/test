@@ -4,8 +4,67 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "663a920c487b02c94b2c214e3ac97392",
+    "hash": "81efc8280c91f4d1b0b32e6f5ecaf7a8",
     "packages": [
+        {
+            "name": "craue/formflow-bundle",
+            "version": "dev-master",
+            "target-dir": "Craue/FormFlowBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/craue/CraueFormFlowBundle.git",
+                "reference": "2008110313b6052ab074ec49058e973b3bb21866"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craue/CraueFormFlowBundle/zipball/2008110313b6052ab074ec49058e973b3bb21866",
+                "reference": "2008110313b6052ab074ec49058e973b3bb21866",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "symfony/form": "~2.1",
+                "symfony/framework-bundle": "~2.1"
+            },
+            "require-dev": {
+                "doctrine/common": "~2.3",
+                "phpunit/phpunit": "~4.0",
+                "sensio/framework-extra-bundle": ">=2.1",
+                "symfony/symfony": "~2.1"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Craue\\FormFlowBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Raue",
+                    "email": "christian.raue@gmail.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://github.com/craue/CraueFormFlowBundle/contributors"
+                }
+            ],
+            "description": "Multi-step forms for your Symfony2 project.",
+            "homepage": "https://github.com/craue/CraueFormFlowBundle",
+            "keywords": [
+                "Symfony2",
+                "form"
+            ],
+            "time": "2014-06-26 13:34:14"
+        },
         {
             "name": "doctrine/annotations",
             "version": "v1.1.2",
@@ -1779,6 +1838,67 @@
             "time": "2014-06-24 08:35:18"
         },
         {
+            "name": "knplabs/knp-components",
+            "version": "1.2.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/knp-components.git",
+                "reference": "8803fdaa18bd24bd158143e3d9099f4b243a31dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/knp-components/zipball/8803fdaa18bd24bd158143e3d9099f4b243a31dd",
+                "reference": "8803fdaa18bd24bd158143e3d9099f4b243a31dd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "suggest": {
+                "doctrine/common": "to allow usage pagination with Doctrine ArrayCollection",
+                "doctrine/mongodb-odm": "to allow usage pagination with Doctrine ODM MongoDB",
+                "doctrine/orm": "to allow usage pagination with Doctrine ORM",
+                "propel/propel1": "to allow usage pagination with Propel ORM",
+                "ruflin/Elastica": "to allow usage pagination with ElasticSearch Client",
+                "solarium/solarium": "to allow usage pagination with Solarium Client"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Knp\\Component": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "KnpLabs Team",
+                    "homepage": "http://knplabs.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://github.com/KnpLabs/knp-components/contributors"
+                }
+            ],
+            "description": "Knplabs component library",
+            "homepage": "http://github.com/KnpLabs/knp-components",
+            "keywords": [
+                "components",
+                "knp",
+                "knplabs",
+                "pager",
+                "paginator"
+            ],
+            "time": "2014-01-09 16:23:31"
+        },
+        {
             "name": "knplabs/knp-gaufrette-bundle",
             "version": "v0.1.7",
             "target-dir": "Knp/Bundle/GaufretteBundle",
@@ -1955,6 +2075,65 @@
                 "menu"
             ],
             "time": "2014-06-16 19:59:46"
+        },
+        {
+            "name": "knplabs/knp-paginator-bundle",
+            "version": "dev-master",
+            "target-dir": "Knp/Bundle/PaginatorBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/KnpPaginatorBundle.git",
+                "reference": "8067a1b46260c619ae8f3ffa3c32a612ff04924c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/KnpPaginatorBundle/zipball/8067a1b46260c619ae8f3ffa3c32a612ff04924c",
+                "reference": "8067a1b46260c619ae8f3ffa3c32a612ff04924c",
+                "shasum": ""
+            },
+            "require": {
+                "knplabs/knp-components": "~1.2",
+                "php": ">=5.3.3",
+                "symfony/framework-bundle": "~2.0",
+                "twig/twig": "~1.5"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Knp\\Bundle\\PaginatorBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "KnpLabs Team",
+                    "homepage": "http://knplabs.com"
+                },
+                {
+                    "name": "Symfony2 Community",
+                    "homepage": "http://github.com/KnpLabs/KnpPaginatorBundle/contributors"
+                }
+            ],
+            "description": "Paginator bundle for Symfony2 to automate pagination and simplify sorting and other features",
+            "homepage": "http://github.com/KnpLabs/KnpPaginatorBundle",
+            "keywords": [
+                "Symfony2",
+                "bundle",
+                "knp",
+                "knplabs",
+                "pager",
+                "pagination",
+                "paginator"
+            ],
+            "time": "2014-05-13 07:26:35"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -2145,30 +2324,33 @@
         },
         {
             "name": "mopa/bootstrap-bundle",
-            "version": "v3.0.0-beta2",
+            "version": "dev-master",
             "target-dir": "Mopa/Bundle/BootstrapBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phiamo/MopaBootstrapBundle.git",
-                "reference": "4b4ec879de978fe40a792a359f0940362ef503ec"
+                "reference": "c13d3042f5a086c4b9670eb353325b00a6ed9592"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phiamo/MopaBootstrapBundle/zipball/4b4ec879de978fe40a792a359f0940362ef503ec",
-                "reference": "4b4ec879de978fe40a792a359f0940362ef503ec",
+                "url": "https://api.github.com/repos/phiamo/MopaBootstrapBundle/zipball/c13d3042f5a086c4b9670eb353325b00a6ed9592",
+                "reference": "c13d3042f5a086c4b9670eb353325b00a6ed9592",
                 "shasum": ""
             },
             "require": {
-                "mopa/composer-bridge": "1.3.*",
-                "symfony/symfony": "~2.3-dev"
+                "mopa/composer-bridge": "~1.3",
+                "symfony/console": "~2.3",
+                "symfony/form": "~2.3",
+                "symfony/framework-bundle": "~2.3",
+                "symfony/twig-bundle": "~2.3"
             },
             "suggest": {
-                "craue/formflow-bundle": "dev-master",
-                "jlong/sass-twitter-bootstrap": "dev-master",
-                "knplabs/knp-menu-bundle": "2.0.*",
-                "knplabs/knp-paginator-bundle": "dev-master",
+                "craue/formflow-bundle": "~2.0",
+                "knplabs/knp-menu-bundle": "~2.0@dev",
+                "knplabs/knp-paginator-bundle": "~2.3",
                 "mopa/bootstrap-sandbox-bundle": "~2.3",
-                "twbs/bootstrap": "2.*"
+                "twbs/bootstrap": ">2.0,<4.0-dev",
+                "twbs/bootstrap-sass": "v3.1.1"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -2178,7 +2360,7 @@
             },
             "autoload": {
                 "psr-0": {
-                    "Mopa\\Bundle\\BootstrapBundle": ""
+                    "Mopa\\Bundle\\BootstrapBundle\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2204,7 +2386,7 @@
                 "form",
                 "template"
             ],
-            "time": "2013-10-14 22:38:11"
+            "time": "2014-06-25 17:06:37"
         },
         {
             "name": "mopa/composer-bridge",
@@ -2309,12 +2491,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mremi/ContactBundle.git",
-                "reference": "7b5d9523b9c5783709d51260d1dd2dd1f3198309"
+                "reference": "ea11e9490dee843f8b3c27044ece23482daaa75e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mremi/ContactBundle/zipball/7b5d9523b9c5783709d51260d1dd2dd1f3198309",
-                "reference": "7b5d9523b9c5783709d51260d1dd2dd1f3198309",
+                "url": "https://api.github.com/repos/mremi/ContactBundle/zipball/ea11e9490dee843f8b3c27044ece23482daaa75e",
+                "reference": "ea11e9490dee843f8b3c27044ece23482daaa75e",
                 "shasum": ""
             },
             "require": {
@@ -2350,7 +2532,7 @@
                 "contact",
                 "form"
             ],
-            "time": "2014-04-28 20:16:09"
+            "time": "2014-07-01 19:28:29"
         },
         {
             "name": "phpcollection/phpcollection",
@@ -2901,12 +3083,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataCoreBundle.git",
-                "reference": "fdeb39d81d31f377b49e8bbfa2b72eb2d4ae1dcb"
+                "reference": "08a37ea2dae40aafadbe9587090723059a06645f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataCoreBundle/zipball/fdeb39d81d31f377b49e8bbfa2b72eb2d4ae1dcb",
-                "reference": "fdeb39d81d31f377b49e8bbfa2b72eb2d4ae1dcb",
+                "url": "https://api.github.com/repos/sonata-project/SonataCoreBundle/zipball/08a37ea2dae40aafadbe9587090723059a06645f",
+                "reference": "08a37ea2dae40aafadbe9587090723059a06645f",
                 "shasum": ""
             },
             "require": {
@@ -2956,35 +3138,37 @@
             "keywords": [
                 "sonata"
             ],
-            "time": "2014-06-14 13:33:31"
+            "time": "2014-07-01 10:55:39"
         },
         {
             "name": "sonata-project/doctrine-orm-admin-bundle",
-            "version": "2.2.7",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataDoctrineORMAdminBundle.git",
-                "reference": "394d0b02483ef3b53614255976484129e0715d13"
+                "reference": "2705f193d6a441b9140fef0996ca392887130ec0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataDoctrineORMAdminBundle/zipball/394d0b02483ef3b53614255976484129e0715d13",
-                "reference": "394d0b02483ef3b53614255976484129e0715d13",
+                "url": "https://api.github.com/repos/sonata-project/SonataDoctrineORMAdminBundle/zipball/2705f193d6a441b9140fef0996ca392887130ec0",
+                "reference": "2705f193d6a441b9140fef0996ca392887130ec0",
                 "shasum": ""
             },
             "require": {
                 "doctrine/orm": "~2.3",
-                "sonata-project/admin-bundle": "~2.2,>=2.2.2",
+                "sonata-project/admin-bundle": "~2.3@dev",
                 "sonata-project/exporter": "~1.3,>=1.3.1",
-                "symfony/console": "~2.2",
+                "symfony/console": "~2.3",
                 "symfony/doctrine-bridge": "~2.2",
-                "symfony/form": "~2.2",
+                "symfony/form": "~2.3",
                 "symfony/framework-bundle": "~2.2",
-                "symfony/security": "~2.2"
+                "symfony/security": "~2.3"
+            },
+            "provide": {
+                "sonata-project/admin-bundle-persistency-layer": "1.0.0"
             },
             "require-dev": {
-                "simplethings/entity-audit-bundle": "~0.1",
-                "sonata-project/admin-bundle": "~2.2@dev"
+                "simplethings/entity-audit-bundle": "~0.1"
             },
             "suggest": {
                 "simplethings/entity-audit-bundle": "If you want to support for versioning of entities and their associations."
@@ -2992,7 +3176,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2.x-dev"
+                    "dev-master": "2.3.x-dev"
                 }
             },
             "autoload": {
@@ -3024,7 +3208,7 @@
                 "generator",
                 "sonata"
             ],
-            "time": "2014-02-14 16:32:14"
+            "time": "2014-06-10 21:07:08"
         },
         {
             "name": "sonata-project/exporter",
@@ -3081,6 +3265,57 @@
                 "xls"
             ],
             "time": "2013-10-24 13:43:33"
+        },
+        {
+            "name": "sonata-project/jquery-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sonata-project/SonatajQueryBundle.git",
+                "reference": "8db2fbc85e57f193d22ed67f0223c8a717eeaad5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sonata-project/SonatajQueryBundle/zipball/8db2fbc85e57f193d22ed67f0223c8a717eeaad5",
+                "reference": "8db2fbc85e57f193d22ed67f0223c8a717eeaad5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.9.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sonata\\jQueryBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Rabaix",
+                    "email": "thomas.rabaix@sonata-project.org",
+                    "homepage": "http://sonata-project.org"
+                },
+                {
+                    "name": "Sonata Community",
+                    "homepage": "https://github.com/sonata-project/SonatajQueryBundle/contributors"
+                }
+            ],
+            "description": "Symfony SonatajQueryBundle",
+            "homepage": "http://sonata-project.org/bundles/jquery",
+            "keywords": [
+                "jquery",
+                "sonata"
+            ],
+            "time": "2014-03-19 11:45:00"
         },
         {
             "name": "stfalcon/tinymce-bundle",
@@ -3542,40 +3777,54 @@
         },
         {
             "name": "twbs/bootstrap",
-            "version": "v3.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "e8a1df5f060bf7e6631554648e0abde150aedbe4"
+                "reference": "a013c112c41e096a881de67cae76fbaeb88947ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/e8a1df5f060bf7e6631554648e0abde150aedbe4",
-                "reference": "e8a1df5f060bf7e6631554648e0abde150aedbe4",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/a013c112c41e096a881de67cae76fbaeb88947ee",
+                "reference": "a013c112c41e096a881de67cae76fbaeb88947ee",
                 "shasum": ""
             },
+            "replace": {
+                "twitter/bootstrap": "self.version"
+            },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2.x-dev"
+                }
+            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "Apache-2.0"
+                "MIT"
             ],
             "authors": [
                 {
-                    "name": "sugeng tigefa",
-                    "email": "tigefa@gmail.com"
-                },
-                {
                     "name": "Jacob Thornton",
                     "email": "jacobthornton@gmail.com"
+                },
+                {
+                    "name": "Mark Otto",
+                    "email": "markdotto@gmail.com"
                 }
             ],
-            "description": "Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.",
+            "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
             "homepage": "http://getbootstrap.com",
             "keywords": [
-                "bootstrap",
-                "css"
+                "JS",
+                "css",
+                "framework",
+                "front-end",
+                "less",
+                "mobile-first",
+                "responsive",
+                "web"
             ],
-            "time": "2013-08-19 21:18:20"
+            "time": "2014-07-01 04:32:50"
         },
         {
             "name": "twig/extensions",
@@ -4024,17 +4273,22 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "friendsofsymfony/user-bundle": 20,
-        "mopa/bootstrap-bundle": 10,
+        "mopa/bootstrap-bundle": 20,
+        "twbs/bootstrap": 20,
         "jms/security-extra-bundle": 20,
         "mremi/contact-bundle": 20,
         "sonata-project/core-bundle": 20,
         "sonata-project/admin-bundle": 20,
         "stfalcon/tinymce-bundle": 20,
+        "sonata-project/doctrine-orm-admin-bundle": 20,
         "knplabs/knp-menu": 20,
         "knplabs/knp-menu-bundle": 20,
         "gregwar/image-bundle": 20,
         "jms/serializer-bundle": 20,
-        "sensio/buzz-bundle": 20
+        "sensio/buzz-bundle": 20,
+        "sonata-project/jquery-bundle": 20,
+        "knplabs/knp-paginator-bundle": 20,
+        "craue/formflow-bundle": 20
     },
     "platform": {
         "php": ">=5.3.3"

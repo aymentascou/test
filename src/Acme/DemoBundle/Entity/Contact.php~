@@ -25,49 +25,49 @@ class Contact extends BaseContact
     /**
      * @var string
      * 
-     * @ORM\Column(name="titre", type="string", length=255)
+     * @ORM\Column(name="titre", type="string", length=255, nullable=true)
      */
     protected $title;
 
     /**
      * @var string
      * 
-     * @ORM\Column(name="firstname", type="string", length=255)
+     * @ORM\Column(name="firstname", type="string", length=255, nullable=true)
      */
     protected $firstName;
 
     /**
      * @var string
      * 
-     * @ORM\Column(name="lastName", type="string", length=255)
+     * @ORM\Column(name="lastname", type="string", length=255, nullable=true)
      */
     protected $lastName;
 
     /**
      * @var string
      * 
-     * @ORM\Column(name="email", type="string", length=255)
+     * @ORM\Column(name="email", type="string", length=255, nullable=true)
      */
     protected $email;
 
     /**
      * @var string
      * 
-     * @ORM\Column(name="subject", type="string", length=255)
+     * @ORM\Column(name="subject", type="string", length=255, nullable=true)
      */
     protected $subject;
 
     /**
      * @var string
      * 
-     * @ORM\Column(name="message", type="string", length=255)
+     * @ORM\Column(name="message", type="string", length=255, nullable=true)
      */
     protected $message;
     
     /**
      * @var \DateTime
      * 
-     * @ORM\Column(name="createAt", type="DateTime", length=255)
+     * @ORM\Column(name="createAt", type="datetime", nullable=true)
      */
     protected $createdAt;
     
