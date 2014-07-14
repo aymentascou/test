@@ -7,28 +7,39 @@
 
 <h1>{{ 'listarticles'|trans }}</h1>
 {% for article in articles %}
-
+<article>
+    <div id="titrearticle">Article N°{{ loop.index }}</div>
     <table class="table_article">
         <tbody>
             <tr>
-                <th>Titre</th>
-                <td>{{ article.titre }}</td>
+                <td><strong>Titre : {{ article.titre }}</strong></td>
+                <td><strong>Date : {{ article.date|date('Y-m-d H:i:s') }}</strong></td>
             </tr>
             <tr>
-                <th>Date</th>
-                <td>{{ article.date|date('Y-m-d H:i:s') }}</td>
+                <td>Sujet :</td>
             </tr>
             <tr>
-                <th>Sujet</th>
                 <td>{{ article.sujet }}</td>
             </tr>
             <tr>
-                <th>Contenu</th>
+                <td>Contenu :</td>
+            </tr>
+            <tr>
                 <td>{{ article.contenu }}</td>
+            </tr>
+            <tr>
+                <td>
+                    {% for commentaire in article.commentaires %}
+                        Commentaire {{ loop.index }} :
+                        {{ commentaire.msg }} | {{ commentaire.date|date() }}
+                        <br/>
+                    {% endfor %}
+                </td>
             </tr>
         </tbody>
     </table>
-
+    <div id="addcomment"><a id="" href="">Ajouter commentaire</a></div>
+</article>
 {% endfor %}
 
 {% endblock main %}
