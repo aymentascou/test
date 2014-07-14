@@ -31,7 +31,7 @@
                 <td>
                     {% for commentaire in article.commentaires %}
                         Commentaire {{ loop.index }} :
-                        {{ commentaire.msg }} date {{ commentaire.date|date() }}
+                        {{ commentaire.msg }} \ {{ commentaire.date|date() }}
                         <br/>
                     {% endfor %}
                 </td>
