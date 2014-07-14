@@ -73,20 +73,6 @@ class IndexController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $fs = new Filesystem();
-
-        try {
-                //$fs->mkdir('C:\Users\DELL\Desktop\ppp', 0700);
-                
-                //$fs->copy('C:\Users\DELL\Desktop\test.txt','C:\Users\DELL\Desktop\pppm.jpg');
-            
-                $fs->remove('C:\Users\DELL\Desktop\test.txt');
-                
-            } catch (IOException $e) {
-                return new Response("exce") ;
-            }
-            
-        return new Response("index") ;
         /*
         $article = new Article();
         
