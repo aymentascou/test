@@ -71,3 +71,12 @@ AcmeDemoBundle_article:
 AcmeDemoBundle_commentaire:
     resource: "@AcmeDemoBundle/Resources/config/routing/commentaire.yml"
     prefix:   /commentaire
+    
+acmedemobundle_articles:
+    pattern: /{_locale}/articles
+    defaults:
+        _controller: AcmeDemoBundle:Index:article
+        _locale: fr
+    requirements:
+        _method: GET|POST
+        _locale: fr|en|ar

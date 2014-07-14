@@ -23,7 +23,10 @@
 
 {% if not is_granted("IS_AUTHENTICATED_REMEMBERED") %}
 <form action="{{ path("fos_user_security_check") }}" method="post">
-    <h1>Se connecter</h1>
+    {% block connect %}
+    {% trans_default_domain 'AcmeDemoBundle' %}
+    <h1>{{ 'connect'|trans }}</h1>
+    {% endblock connect %}
     <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
 
     <label for="username">{{ 'security.login.username'|trans }}</label>

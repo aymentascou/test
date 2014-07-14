@@ -19,7 +19,7 @@ body {
 	font: .70em/1.5em  Verdana, Tahoma, Helvetica, sans-serif;
 	color: #666666; 
 	/*background: #A9BAC3 url(bg.gif) repeat-x;*/
-	background-color: #F5F6F6;
+	background-color: #FFFFFF;
 	text-align: center;
 }
 
@@ -27,9 +27,32 @@ body {
 	position: absolute;
 	margin: 0;
 	padding: 0;
-	left: 30px;
-	top: 15px;
-        background-color: #FFFFFF;
+	right: 10%;
+        vertical-align: middle;
+        margin-top : 30px;
+}
+
+#header #drapeaux a img {
+    border-radius: 12px;
+}
+
+.cercle {
+    width: 300px;
+    height: 150px;
+    border-radius: 200px;
+    background-color: #f4f8fa;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 150px;
+}
+
+table.table_article {
+    background-color: #FAFAFA;
+    border-width: 1px;
+    border-radius: 4px;
+    width: 100%;
+    padding: 5px;
 }
 
 #header #drapeaux a {
@@ -56,9 +79,9 @@ a:hover {
 
 /* headers */
 h1, h2, h3 {
-	font: bold 1em 'Trebuchet MS', Arial, Sans-serif;
-	color: #333;	
+    font-family: "Roboto Slab",Helvetica,Arial,sans-serif;
 }
+
 h1 { font-size: 1.5em; color: #6297BC; } 
 h2 { font-size: 1.4em; text-transform:uppercase;}
 h3 { font-size: 1.3em; }
@@ -123,11 +146,11 @@ blockquote {
 }
 
 /* form elements */
-form {
-	margin:10px; 
-        padding: 10px;
-	border: 1px solid #f2f2f2; 
-	background-color: #FAFAFA; 
+form { 
+        padding: 0px;
+	border: 0px; 
+	background-color: #FFFFFF;
+        width: 100%;
 }
 label {
 	display:block;
@@ -210,10 +233,10 @@ form.searchform input.button {
 ************************/
 #wrap {
 	background: #FFF;
-	width: 1000px; 
+	width: 100%; 
         height: 100%;
 	margin: 0 auto;	
-	text-align: left;
+	text-align: center;
 }
 #content-wrap {
 	clear: both;
@@ -222,11 +245,39 @@ form.searchform input.button {
 }
 
 /* header */
-#header {
-	position: relative;
-	height: 220px;	
-	background: #FFF;	
+header {
+	clear: both; 
+	color: #FFF; 
+	background: #FFFFFF;
+	border-right:0px;
+	border-left: 0px;
+	border-bottom:0px;
+	margin: 0; 
+        padding: 10px; 
+	height: 100px;	  
+	font-size: 95%;	
+        height: 100px;
+        opacity: 0.8;
+        text-align: center;
 }
+
+#header {
+	height: 100px;	
+	background: #2A76DB;
+        vertical-align: middle;
+}
+
+#header nav {
+        vertical-align: middle;
+        margin-top : 30px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 600px;
+        color: #FFFFF;
+        position: absolute;
+        left: 10%;
+}
+
 #header h1#logo {
 	position: absolute;
 	margin: 0;
@@ -247,12 +298,12 @@ form.searchform input.button {
 	font: bold 11px Tahoma, 'trebuchet MS', Sans-serif; 
 	text-transform: none;	
 }
-#header form.searchform {
+header form.searchform {
 	position: absolute;
 	top: 0px; 
 	right: 20px;
-        width: 240px;
-        height: 60px;
+        width: 250px;
+        height: 70px;
         background-color: #FAFAFA;
         border-width: 1px;
         border-color: #CCC;
@@ -261,10 +312,15 @@ form.searchform input.button {
 
 /* main */
 #main {
-	float: left;
-	margin-left: 15px;
+	margin-left: auto;
+        margin-right: auto;
+        position: relative;
 	padding: 0;
-	width: 50%;		
+	width: 70%;		
+}
+
+footer {
+    margin-top : 20px;
 }
 
 .post-footer {
@@ -310,7 +366,6 @@ form.searchform input.button {
 	padding:2px 5px 2px 10px;
 	background: #f2f2f2;
 	border-left:4px solid #CCC;	
-	
 	min-height:18px;
 }
 
@@ -331,21 +386,23 @@ form.searchform input.button {
 }
 
 /* Footer */
-#footer { 
+#footer {
 	clear: both; 
 	color: #FFF; 
-	background: #000; 
-	border-top: 5px solid #000;
+	background: #3F3F3F;
 	border-right:0px;
 	border-left: 0px;
 	border-bottom:0px;
 	margin: 0; padding: 0; 
-	height: 50px;	  
-	font-size: 95%;		
+	height: 100px;	  
+	font-size: 95%;	
+        height: 100px;
+        opacity: 0.8;
+        margin-top: 20px;
 }
 #footer a { 
 	text-decoration: none; 
-	font-weight: bold;	
+	font-weight: bold;
 	color: #FFF;
 }
 #footer .footer-left{
@@ -361,9 +418,11 @@ form.searchform input.button {
 #header ul {
 	z-index: 999999;
 	position: absolute;
-   margin:0; padding: 0;
-   list-style:none;
-	left: 0; 
+        margin-right: auto; 
+        margin-left: auto;
+        width : 80%;
+        padding: 0;
+        list-style:none;
 	bottom: 6px !important; bottom: 5px;
 	font: bold 13px  Arial, 'Trebuchet MS', Tahoma, verdana,  sans-serif;	
 }
@@ -372,12 +431,12 @@ form.searchform input.button {
    margin:0; padding:0;
 }
 
-#header a span {
+#header a {
    float:left;
    display:block;
-   background: url(tabright.gif) no-repeat right top;
    padding:6px 15px 3px 8px;
    color: #FFF;
+   font-size: 16px;
 }
 /* Commented Backslash Hack hides rule from IE5-Mac \*/
 #header a span {float:none;}
@@ -387,6 +446,7 @@ form.searchform input.button {
 }
 #header a:hover {
    background-position:0% -42px;
+   color: hsla;
 }
 #header a:hover span {
    background-position:100% -42px;

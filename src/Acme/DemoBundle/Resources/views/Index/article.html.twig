@@ -1,0 +1,34 @@
+{% extends "AcmeDemoBundle::base.html.twig" %}
+
+{% block main %}
+
+{% trans_default_domain 'MremiContactBundle' %}
+{% trans_default_domain 'AcmeDemoBundle' %}
+
+<h1>{{ 'listarticles'|trans }}</h1>
+{% for article in articles %}
+
+    <table class="table_article">
+        <tbody>
+            <tr>
+                <th>Titre</th>
+                <td>{{ article.titre }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ article.date|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Sujet</th>
+                <td>{{ article.sujet }}</td>
+            </tr>
+            <tr>
+                <th>Contenu</th>
+                <td>{{ article.contenu }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endfor %}
+
+{% endblock main %}

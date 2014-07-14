@@ -200,10 +200,10 @@ ivory_google_map:
         type: "roadmap"
 
         # Map width
-        width: "300px"
+        width: "100%"
 
         # Map height
-        height: "300px"
+        height: "500px"
 
         # Custom map options
         # By default, there is no map options
@@ -214,7 +214,7 @@ ivory_google_map:
         # Custom stylesheet options
         # By default, there is no stylesheet options except width & height
         stylesheet_options:
-            border: "1px solid #000"
+            border: "0px solid #000"
             background-color: "#fff"
 
         # google map Api language, default en

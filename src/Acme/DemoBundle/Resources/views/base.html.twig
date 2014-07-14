@@ -20,35 +20,35 @@
 <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 </head>
 <body>
-<div id="wrap">
-  <div id="header">
+<!-- {{ render(controller('AcmeDemoBundle:Security:login')) }} -->
+<div id="header">
 <div id="drapeaux">
     <a href="{{ path(_route, {'_locale': 'en'}) }}"><img width="40px" height="20px" src="http://engees-fresqueau.unistra.fr/drapeau/drapeaua.jpg"></img></a>
     <a href="{{ path(_route, {'_locale': 'fr'}) }}"><img width="40px" height="20px" src="http://croc.campus.ecp.fr/french.jpg"></img></a>
 </div>
-          <h1 id="logo"><img width="400px" height="100px" src="{{ asset('bundles/acmedemo/images/logo-high-tech.jpg') }}"></img></h1>
+    <!--
     <form method="post" class="searchform" action="">
       <p>
         <input type="text" name="search_query" />
-        <input type="submit" name="search" value="Chercher" />
+        <input type="submit" name="search" value="{{ 'search'|trans }}" />
       </p>
     </form>
+    -->
+       <h1 id="logo"></h1>
         <nav>
-            <ul class="fancyNav">
-                <li id="home"><a href="#" class="homeIcon">{{ 'home'|trans }}</a></li>
-                <li id="home"><a href="#">{{ 'home'|trans }}</a></li>
-                <li id="news"><a href="#">{{ 'news'|trans }}</a></li>
-                <li id="article"><a href="#">{{ 'article'|trans }}</a></li>
-                <li id="about"><a href="{{ path('apropos', { '_locale': app.request.locale }) }}">{{ 'about'|trans }}</a></li>
-                <li id="contact"><a href="{{ path('contact', { '_locale': app.request.locale }) }}">{{ 'contact'|trans }}</a></li>
-            </ul>
+                <a href="#"><strong>{{ 'home'|trans }}</a></strong>
+                <a href="#"><strong>{{ 'news'|trans }}</a></strong>
+                <a href="{{ path('acmedemobundle_articles', { '_locale': app.request.locale }) }}"><strong>{{ 'article'|trans }}</strong></a>
+                <a href="{{ path('apropos', { '_locale': app.request.locale }) }}"><strong>{{ 'about'|trans }}</strong></a>
+                <a href="{{ path('contact', { '_locale': app.request.locale }) }}"><strong>{{ 'contact'|trans }}</strong></a>
         </nav>
-  </div>
-  <div id="content-wrap"> 
-    <img src={{ image('images/hi-tech-wallpaper.jpg') }} width="100%" height="230" alt="headerphoto" class="no-border" />
+</div>
+<div id="wrap">
+  <div id="content-wrap">
     <div id="infos-barre">
-        <marquee direction="left">FlashInfos : --- ;</marquee>
+        
     </div>
+    <!--
     <div id="sidebar">
       <h1>Menu</h1>
       <ul class="sidemenu">
@@ -63,44 +63,23 @@
         <li><a href="http://www.info-technology.tn/">InfosTech</a></li>
       </ul>
     </div>
+    -->
     <div id="main">
         {% block main %}
         {% endblock main %}
     </div>
-    <div id="rightbar">
-    
-    {{ render(controller('AcmeDemoBundle:Security:login')) }}
-
-{#
-      <form id="form1" method="post" action="">
-        <p>
-          Nom utilisateur : <br />
-          <input class="text" type="text" name="textfield" />
-        </p>
-        <p>Mot de passe :
-		  <input class="text" type="password" name="textfield2" />
-		  <br/>
-	    </p>
-        <p><br/>
-          <center><input class="button" type="submit" /></center>
-        </p>
-        <center><a href="{{ path('inscription') }}">Inscription</a></center>
-		<center><a href="">Mot de passe oublié</a></center>
-      </form>
-#}
-      <p>&nbsp; </p>
-      <p><!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-	  </p>
-    </div>
   </div>
-  <div id="footer">
+</div>
+<div id="footer">
     <div class="footer-left">
       <p class="align-left">&nbsp;</p>
     </div>
     <div class="footer-right">
-      <p class="align-right">&copy; 2014 <strong>www.hightech.net</strong></p>
+      <p class="align-right"></p>
     </div>
-  </div>
 </div>
+<footer>
+<center>&copy; 2014 <strong>www.hightech.net</strong></center>
+</footer>
 </body>
 </html>

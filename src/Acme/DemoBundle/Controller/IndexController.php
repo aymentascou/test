@@ -86,4 +86,23 @@ class IndexController extends Controller
          * 
          */
     }
+    
+    /**
+     * 
+     */
+    public function articleAction()
+    {
+        
+        $em = $this->getDoctrine()->getManager();
+
+        $articles = $em->getRepository('AcmeDemoBundle:Article')->findAll();
+        
+        if (!$articles) {
+            throw $this->createNotFoundException('There is no articles');
+        }
+
+        return $this->render('AcmeDemoBundle:Index:article.html.twig', array(
+            'articles' => $articles
+        ));
+    }
 }

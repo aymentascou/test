@@ -2,15 +2,14 @@
 
 {% block main %}
 
-
 {% trans_default_domain 'AcmeDemoBundle' %}
 {% trans_default_domain 'MremiContactBundle' %}
 
 <form>
-    <h2>{{ 'about'|trans }} :</h2>
-    <article>{{ 'aboutas'| trans }}</article>
     <br/>
-    <address>{{ 'ourposition'|trans }}</address>
+    <div class="cercle">
+    <span style="vertical-align:middle;"><h2>{{ 'ourposition'|trans({}, 'AcmeDemoBundle') }}</h2></span>
+    </div>
     <br/>
     <center>{{ google_map(map) }}</center>
     <br/>

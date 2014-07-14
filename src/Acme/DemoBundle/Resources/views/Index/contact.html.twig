@@ -11,9 +11,9 @@
 
             <h2>{{ 'mremi_contact.form_title'|trans }}</h2>
             
-            {{ form_widget(form) }}
+            {{ form_widget(form.firstname) }}
 
-            {{ form_end(form) }}
+            {{ form_rest(form) }}
             
             {{ tinymce_init() }}
           

@@ -1,6 +1,6 @@
 
 aboutas : "Notre site web contient les nouveauté sur les technologie"
-ourposition : "Notre position :"
+ourposition : "Our Position"
 
 home     : "Accueil"
 news     : "infos"
@@ -9,3 +9,6 @@ contact  : "contact"
 about    : "A propos"
 
 link : "liens"
+listarticles : "Liste des articles :"
+connect: "Se connecter"
+search: "chercher"
