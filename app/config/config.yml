@@ -28,7 +28,8 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
-    exception_controller:  Acme\DemoBundle\Controller\ExceptionController::exceptionAction
+    #exception_controller:  Acme\DemoBundle\Controller\ExceptionController::exceptionAction
+    exception_controller:  Symfony\Bundle\TwigBundle\Controller\ExceptionController::showAction
     globals:
         value1: "test"
 

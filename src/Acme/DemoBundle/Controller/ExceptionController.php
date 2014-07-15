@@ -24,6 +24,6 @@ class ExceptionController extends Controller
      */
     public function exceptionAction(Request $request)
     {
-        return $this->render('AcmeDemoBundle:Index:exception.html.twig', array());
+        return $this->render('AcmeDemoBundle:Index:exception.html.twig');
     }
 }

@@ -9,12 +9,20 @@
     
     {{ form_start(form, {'action': path('contact')}) }}
 
-            <h2>{{ 'mremi_contact.form_title'|trans }}</h2>
+            <h2>{{ 'mremi_contact.form_title'|trans({}, 'MremiContactBundle') }}</h2>
             
-            {{ form_widget(form.firstname) }}
-
+            <h3>{{ form_label(form.firstName) }}</h3> {{ form_widget(form.firstName, { 'attr' : {'class':'contactinput'}}) }} {{ form_errors(form.firstName) }}
+            
+            <h3>{{ form_label(form.lastName) }}</h3> {{ form_widget(form.lastName, { 'attr' : {'class':'contactinput'}}) }} {{ form_errors(form.lastName) }}
+            
+            <h3>{{ form_label(form.email) }}</h3> {{ form_widget(form.email, { 'attr' : {'class':'contactinput'}}) }} {{ form_errors(form.email) }}
+            
+            <h3>{{ form_label(form.subject) }}</h3> {{ form_widget(form.subject, { 'attr' : {'class':'contactinput'}}) }} {{ form_errors(form.subject) }}
+            
+            <h3>{{ form_label(form.message) }}</h3> {{ form_widget(form.message, { 'attr' : {'class':'contacttextarea'}}) }} {{ form_errors(form.message) }}
+            
+            <h3>{{ form_label(form.save) }}</h3> {{ form_widget(form.save, { 'attr' : {'class':'contactsave'}}) }}
+            
             {{ form_rest(form) }}
-            
-            {{ tinymce_init() }}
           
 {% endblock main %}

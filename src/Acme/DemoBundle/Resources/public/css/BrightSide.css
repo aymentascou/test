@@ -23,6 +23,10 @@ body {
 	text-align: center;
 }
 
+#section1 {
+    height: 40px;
+}
+
 #header #drapeaux {
 	position: absolute;
 	margin: 0;
@@ -32,27 +36,62 @@ body {
         margin-top : 30px;
 }
 
+#loginform {
+    width: 600px;
+    right: 20%;
+    position:absolute;
+    margin-top: 30px;
+}
+
+.text-color-white {
+    color : white;
+    font-size: 16px;
+    font-family: cursive;
+}
+
 #header #drapeaux a img {
     border-radius: 12px;
 }
 
+#header form {
+
+}
+
 .cercle {
-    width: 300px;
-    height: 150px;
+    width: 200px;
+    height: 100px;
     border-radius: 200px;
     background-color: #f4f8fa;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    line-height: 150px;
+    line-height: 100px;
 }
 
 table.table_article {
-    background-color: #FAFAFA;
-    border-width: 1px;
-    border-radius: 4px;
-    width: 100%;
+    background-color: #FFFFFF;
+    border-color: #204A84;
+    border-width: 2px;
+    border-radius: 15px;
+    border-style: solid;
+    width: 50%;
     padding: 5px;
+    margin-top : 20px;
+    margin-bottom: 20px;
+    height: 150px;
+    position: relative;
+    left:25%;
+}
+
+article {
+    margin-top : 20px;
+    margin-bottom: 20px;
+}
+
+.table_article thead th {
+    font-size: 16px;
+    font-family: cursive;
+    color: #1B3E6F;
 }
 
 #header #drapeaux a {
@@ -147,9 +186,6 @@ blockquote {
 
 /* form elements */
 form { 
-        padding: 0px;
-	border: 0px; 
-	background-color: #FFFFFF;
         width: 100%;
 }
 label {
@@ -168,15 +204,57 @@ textarea {
 	color:#777;
 }
 
-input { 
+.contactinput {
+	margin: 0px; 
+	font: bold 1em Arial, Sans-serif; 
+	border: 2px solid #000;
+	background: #FFF; 
+	padding: 5px; 
+	color: #4284B0;
+        height: 25px;
+        width: 300px;
+        text-align: center;
+        font-size: 14px;
+        font-family: cursive;
+}
+
+.contacttextarea {
+	margin-left: auto;
+        margin-right: auto;
+	font: bold 1em Arial, Sans-serif; 
+	border: 2px solid #000;
+	background: #FFF; 
+	padding: 2px 3px; 
+	color: #4284B0;
+        height: 100px;
+        width: 300px;
+        text-align: center;
+        font-size: 14px;
+        font-family: cursive;
+}
+
+.contactsave {
+        margin-top : 30px;
+	margin-left: auto;
+        margin-right: auto;
+	font: bold 1em Arial, Sans-serif; 
+	border-radius: 12px;
+	background-color : #2A76DB; 
+	padding: 2px 3px; 
+	color: white;
+        height: 50px;
+        width: 100px;
+        text-align: center;
+}
+
+input {
 	margin: 0px; 
 	font: bold 1em Arial, Sans-serif; 
 	border: 1px solid #CCC;
 	background: #FFF; 
 	padding: 2px 3px; 
 	color: #4284B0;
-        height: 25px;
-        
+        height: 25px;       
 }
 
 input.text { 
@@ -187,7 +265,6 @@ input.text {
 	padding: 2px 3px; 
 	color: #4284B0;
         height: 25px;
-        
 }
 
 input.button { 
@@ -263,7 +340,7 @@ header {
 
 #header {
 	height: 100px;	
-	background: #2A76DB;
+	background: #204A84;
         vertical-align: middle;
 }
 
@@ -275,7 +352,7 @@ header {
         width: 600px;
         color: #FFFFF;
         position: absolute;
-        left: 10%;
+        left: 5%;
 }
 
 #header h1#logo {
@@ -321,6 +398,9 @@ header form.searchform {
 
 footer {
     margin-top : 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
 }
 
 .post-footer {
@@ -389,7 +469,7 @@ footer {
 #footer {
 	clear: both; 
 	color: #FFF; 
-	background: #3F3F3F;
+	background: #1B3E6F;
 	border-right:0px;
 	border-left: 0px;
 	border-bottom:0px;
@@ -431,12 +511,18 @@ footer {
    margin:0; padding:0;
 }
 
-#header a {
+#header nav a {
    float:left;
    display:block;
    padding:6px 15px 3px 8px;
    color: #FFF;
    font-size: 16px;
+}
+
+#header nav a:hover {
+    background-color: #ffffff;
+    color: #2A76DB;
+    
 }
 /* Commented Backslash Hack hides rule from IE5-Mac \*/
 #header a span {float:none;}

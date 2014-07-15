@@ -26,7 +26,7 @@ root:
     pattern: /
     defaults:
         _controller: FrameworkBundle:Redirect:urlRedirect
-        path: /contact
+        path: /fr/contact
         permanent: true
 
 motdepasseoubliee:
@@ -80,3 +80,8 @@ acmedemobundle_articles:
     requirements:
         _method: GET|POST
         _locale: fr|en|ar
+        
+routecharts:
+    pattern: /charts
+    defaults:
+        _controller: AcmeDemoBundle:Index:chart

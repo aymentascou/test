@@ -1,12 +1,13 @@
 
 aboutas : "Notre site web contient les nouveauté sur les technologie"
-ourposition : "Our Position"
+ourposition : "Notre Adresse"
 
 home     : "Accueil"
 news     : "infos"
 article  : "article"
 contact  : "contact"
 about    : "A propos"
+singup   : "Creer Compte"
 
 link : "liens"
 listarticles : "Liste des articles :"
