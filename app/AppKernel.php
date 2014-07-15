@@ -7,9 +7,6 @@ class AppKernel extends Kernel
 {
     public function registerBundles()
     {
-        /**
-         * 
-         */
         $bundles = array(
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
@@ -38,6 +35,7 @@ class AppKernel extends Kernel
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
+            new Ob\HighchartsBundle\ObHighchartsBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test', 'prod'))) {
