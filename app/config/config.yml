@@ -120,9 +120,8 @@ mremi_contact:
         template:          MremiContactBundle:Contact:email.txt.twig
         
 genemu_form:
-    tinymce: ~
-    date: ~
-    captcha: ~
+    captcha:
+        code: 1234
     
 stfalcon_tinymce:
     theme:
@@ -228,3 +227,8 @@ sonata_block:
         sonata.admin.block.admin_list:
             contexts:   [admin]
         # Your other blocks
+
+ewz_recaptcha:
+    public_key:   here_is_your_public_key
+    private_key:  here_is_your_private_key
+    locale_key:   %kernel.default_locale%
