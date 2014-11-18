@@ -188,7 +188,7 @@ ivory_google_map:
         # By default, there is no bound
         bound:
             south_west:
-                latitude: 36.777
+                latitude: 36.776
                 longitude: 10.817
                 no_wrap: true
             north_east:
