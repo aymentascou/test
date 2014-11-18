@@ -53,7 +53,9 @@
         "craue/formflow-bundle": "dev-master",
         "friendsofsymfony/jsrouting-bundle": "@stable",
         "ob/highcharts-bundle": "1.1.*",
-        "excelwebzone/recaptcha-bundle": "dev-master"
+        "excelwebzone/recaptcha-bundle": "dev-master",
+        "mopa/bootstrap-bundle": "v3.0.0-beta3",
+        "twbs/bootstrap": "v3.0.0"
     },
     "scripts": {
         "post-install-cmd": [

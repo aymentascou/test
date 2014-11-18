@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c8d1bd91c7f2671bbfc8d3eebb84adaf",
+    "hash": "cdd5e84c92474089e6b1aec3b1ea6323",
     "packages": [
         {
             "name": "cocur/slugify",
@@ -2474,17 +2474,17 @@
         },
         {
             "name": "mopa/bootstrap-bundle",
-            "version": "dev-master",
+            "version": "v3.0.0-beta3",
             "target-dir": "Mopa/Bundle/BootstrapBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phiamo/MopaBootstrapBundle.git",
-                "reference": "d4f48cc36d5f2e6c6bc32e44a8de52d6a738ae5f"
+                "reference": "94f0628a0abff3bed46ebc640137a9f0d6bb0cff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phiamo/MopaBootstrapBundle/zipball/d4f48cc36d5f2e6c6bc32e44a8de52d6a738ae5f",
-                "reference": "d4f48cc36d5f2e6c6bc32e44a8de52d6a738ae5f",
+                "url": "https://api.github.com/repos/phiamo/MopaBootstrapBundle/zipball/94f0628a0abff3bed46ebc640137a9f0d6bb0cff",
+                "reference": "94f0628a0abff3bed46ebc640137a9f0d6bb0cff",
                 "shasum": ""
             },
             "require": {
@@ -2496,11 +2496,11 @@
             },
             "suggest": {
                 "craue/formflow-bundle": "~2.0",
+                "jlong/sass-twitter-bootstrap": "dev-master",
                 "knplabs/knp-menu-bundle": "~2.0@dev",
                 "knplabs/knp-paginator-bundle": "~2.3",
                 "mopa/bootstrap-sandbox-bundle": "~2.3",
-                "twbs/bootstrap": ">2.0,<4.0-dev",
-                "twbs/bootstrap-sass": "v3.1.1"
+                "twbs/bootstrap": ">2.0,<4.0-dev"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -2519,12 +2519,13 @@
             ],
             "authors": [
                 {
-                    "name": "Community contributions",
-                    "homepage": "https://github.com/phiamo/MopaBootstrapBundle/contributors"
+                    "name": "Philipp A. Mohrenweiser",
+                    "email": "phiamo@googlemail.com",
+                    "homepage": "http://bootstrap.mohrenweiserpartner.de"
                 },
                 {
-                    "name": "Philipp A. Mohrenweiser",
-                    "email": "phiamo@googlemail.com"
+                    "name": "Community contributions",
+                    "homepage": "https://github.com/phiamo/MopaBootstrapBundle/contributors"
                 }
             ],
             "description": "Easy integration of twitters bootstrap into symfony2",
@@ -2535,7 +2536,7 @@
                 "form",
                 "template"
             ],
-            "time": "2014-11-10 17:25:42"
+            "time": "2013-10-25 11:56:03"
         },
         {
             "name": "mopa/composer-bridge",
@@ -3078,12 +3079,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataAdminBundle.git",
-                "reference": "eb9a0075f00f4bced67836ab9c670deee769c5ba"
+                "reference": "684b6f5932f4bc1c6e6e8c56bdb632a797c8d002"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/eb9a0075f00f4bced67836ab9c670deee769c5ba",
-                "reference": "eb9a0075f00f4bced67836ab9c670deee769c5ba",
+                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/684b6f5932f4bc1c6e6e8c56bdb632a797c8d002",
+                "reference": "684b6f5932f4bc1c6e6e8c56bdb632a797c8d002",
                 "shasum": ""
             },
             "require": {
@@ -3149,7 +3150,7 @@
                 "bootstrap",
                 "sonata"
             ],
-            "time": "2014-11-11 20:31:42"
+            "time": "2014-11-14 16:45:57"
         },
         {
             "name": "sonata-project/block-bundle",
@@ -3928,54 +3929,40 @@
         },
         {
             "name": "twbs/bootstrap",
-            "version": "dev-master",
+            "version": "v3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "bb89657bcb53a60d579d8fd9bbea56dde05dad8c"
+                "reference": "e8a1df5f060bf7e6631554648e0abde150aedbe4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/bb89657bcb53a60d579d8fd9bbea56dde05dad8c",
-                "reference": "bb89657bcb53a60d579d8fd9bbea56dde05dad8c",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/e8a1df5f060bf7e6631554648e0abde150aedbe4",
+                "reference": "e8a1df5f060bf7e6631554648e0abde150aedbe4",
                 "shasum": ""
             },
-            "replace": {
-                "twitter/bootstrap": "self.version"
-            },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.3.x-dev"
-                }
-            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "Apache-2.0"
             ],
             "authors": [
                 {
-                    "name": "Jacob Thornton",
-                    "email": "jacobthornton@gmail.com"
+                    "name": "sugeng tigefa",
+                    "email": "tigefa@gmail.com"
                 },
                 {
-                    "name": "Mark Otto",
-                    "email": "markdotto@gmail.com"
+                    "name": "Jacob Thornton",
+                    "email": "jacobthornton@gmail.com"
                 }
             ],
-            "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+            "description": "Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.",
             "homepage": "http://getbootstrap.com",
             "keywords": [
-                "JS",
-                "css",
-                "framework",
-                "front-end",
-                "less",
-                "mobile-first",
-                "responsive",
-                "web"
+                "bootstrap",
+                "css"
             ],
-            "time": "2014-11-11 06:46:14"
+            "time": "2013-08-19 21:18:20"
         },
         {
             "name": "twig/extensions",
@@ -4088,16 +4075,16 @@
         },
         {
             "name": "vich/uploader-bundle",
-            "version": "v0.11.1",
+            "version": "v0.11.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dustin10/VichUploaderBundle.git",
-                "reference": "7bd6a4846a3c96ea503ee46805caf2af34c52966"
+                "reference": "904a0f3b39e4b2213746285020b1943cb16a7228"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dustin10/VichUploaderBundle/zipball/7bd6a4846a3c96ea503ee46805caf2af34c52966",
-                "reference": "7bd6a4846a3c96ea503ee46805caf2af34c52966",
+                "url": "https://api.github.com/repos/dustin10/VichUploaderBundle/zipball/904a0f3b39e4b2213746285020b1943cb16a7228",
+                "reference": "904a0f3b39e4b2213746285020b1943cb16a7228",
                 "shasum": ""
             },
             "require": {
@@ -4155,7 +4142,7 @@
                 "file uploads",
                 "upload"
             ],
-            "time": "2014-11-06 14:44:02"
+            "time": "2014-11-14 00:17:42"
         },
         {
             "name": "widop/http-adapter",
@@ -4531,17 +4518,12 @@
             "time": "2014-03-14 16:22:22"
         }
     ],
-    "packages-dev": [
-
-    ],
-    "aliases": [
-
-    ],
+    "packages-dev": [],
+    "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
         "friendsofsymfony/user-bundle": 20,
-        "mopa/bootstrap-bundle": 20,
-        "twbs/bootstrap": 20,
+        "mopa/bootstrap-bundle": 10,
         "jms/security-extra-bundle": 20,
         "mremi/contact-bundle": 20,
         "sonata-project/core-bundle": 20,
@@ -4559,10 +4541,9 @@
         "friendsofsymfony/jsrouting-bundle": 0,
         "excelwebzone/recaptcha-bundle": 20
     },
+    "prefer-stable": false,
     "platform": {
         "php": ">=5.3.3"
     },
-    "platform-dev": [
-
-    ]
+    "platform-dev": []
 }

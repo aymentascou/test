@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Acme\DemoBundle\Controller;
 
 use Symfony\Component\DependencyInjection\ContainerAware;
