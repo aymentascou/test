@@ -193,7 +193,7 @@ ivory_google_map:
                 no_wrap: true
             north_east:
                 latitude: 36.777
-                longitude: 10.817
+                longitude: 10.819
                 no_wrap: true
 
         # Default map type
