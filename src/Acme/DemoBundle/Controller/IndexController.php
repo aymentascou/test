@@ -20,6 +20,7 @@ use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Filesystem\Exception\IOException;
 
 use Ob\HighchartsBundle\Highcharts\Highchart;
+
 /**
  * Index controller.
  *
@@ -72,24 +73,9 @@ class IndexController extends Controller
     /**
      * 
      */
-    public function indexAction(Request $request)
+    public function testAction(Request $request)
     {
-        /*
-        $article = new Article();
-        
-        $article->setTitre("titre1") ;
-        
-        $commentaire = new Commentaire();
-        
-        $commentaire->setNom("comm1");
-        
-        $commentaire->setMsg("msg");
-        
-        $article->addCommentaire($commentaire);
-        
-        return new Response($article->getTitre());
-         * 
-         */
+        return new Response("hello");
     }
     
     /**

@@ -37,3 +37,6 @@ _sonata_admin:
     resource: .
     type: sonata_admin
     prefix: /admin
+
+genemu_base64:
+    resource: "@GenemuFormBundle/Resources/config/routing/base64.xml"

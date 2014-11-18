@@ -6,7 +6,7 @@
 
 <form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register">
     <h2>
-            {{ 'createaccount'|trans('') }}
+            {{ 'createaccount'|trans }}
     </h2>
     {{ form_widget(form) }}
     <div>
@@ -14,4 +14,11 @@
     </div>
 </form>
 
+{% form_theme form 'EWZRecaptchaBundle:Form:ewz_recaptcha_widget.html.twig' %}
+
+{{ form_widget(form.recaptcha, { 'attr': {
+    'options' : {
+        'theme' : 'clean',
+    },
+} }) }}
 {% endblock main %}

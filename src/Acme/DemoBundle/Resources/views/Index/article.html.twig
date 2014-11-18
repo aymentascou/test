@@ -38,7 +38,7 @@
             </tr>
         </tbody>
     </table>
-    <div id="addcomment"><a id="" href="">Ajouter commentaire</a></div>
+    <div id="addcomment"><a id="{{ article.id }}" href="{{ path('addcommentaire', { '_locale': app.request.locale }) }}">Ajouter commentaire</a></div>
 </article>
 {% endfor %}
 

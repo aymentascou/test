@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/easy/www/project/src/Acme/DemoBundle/Resources/views/Index/apropos.html.twig</file>
+            <file>file:/C:/easy/www/project/app/config/config.yml</file>
+            <file>file:/C:/easy/www/project/app/console</file>
+            <file>file:/C:/easy/www/project/src/Acme/DemoBundle/Resources/views/Index/article.html.twig</file>
+            <file>file:/C:/easy/www/project/src/Acme/DemoBundle/Entity/Article.php</file>
+            <file>file:/C:/easy/www/project/src/Acme/DemoBundle/Resources/views/base.html.twig</file>
+            <file>file:/C:/easy/www/project/src/Acme/DemoBundle/Resources/views/Index/confirmation.html.twig</file>
+            <file>file:/C:/easy/www/project/src/Acme/DemoBundle/Resources/views/Index/charts.html.twig</file>
+            <file>file:/C:/easy/www/project/src/Acme/DemoBundle/Form/UserType.php</file>
+            <file>file:/C:/easy/www/project/src/Acme/DemoBundle/Resources/views/Index/main.html.twig</file>
+            <file>file:/C:/easy/www/project/src/Acme/DemoBundle/Controller/IndexController.php</file>
+            <file>file:/C:/easy/www/project/src/Acme/DemoBundle/Resources/views/Index/seconnecter.html.twig</file>
+            <file>file:/C:/easy/www/project/src/Acme/DemoBundle/Resources/config/routing.yml</file>
+            <file>file:/C:/easy/www/project/src/Acme/DemoBundle/Form/CommentaireType.php</file>
+        </group>
+    </open-files>
 </project-private>

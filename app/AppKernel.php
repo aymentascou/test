@@ -35,7 +35,8 @@ class AppKernel extends Kernel
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
-            new Ob\HighchartsBundle\ObHighchartsBundle()
+            new Ob\HighchartsBundle\ObHighchartsBundle(),
+            new EWZ\Bundle\RecaptchaBundle\EWZRecaptchaBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test', 'prod'))) {

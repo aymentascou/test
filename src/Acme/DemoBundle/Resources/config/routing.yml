@@ -29,6 +29,11 @@ root:
         path: /fr/contact
         permanent: true
 
+test:
+    pattern: /test
+    defaults:
+        _controller: AcmeDemoBundle:Index:test
+
 motdepasseoubliee:
     pattern: /motdepasseoubliee
     defaults:
@@ -85,3 +90,10 @@ routecharts:
     pattern: /charts
     defaults:
         _controller: AcmeDemoBundle:Index:chart
+        
+addcommentaire:
+    pattern: /{_locale}/addcomment
+    defaults:
+        _controller: AcmeDemoBundle:Index:addcomment
+    requirements:
+        _method: POST
