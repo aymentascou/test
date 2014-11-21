@@ -61,7 +61,7 @@ class RegistrationController extends BaseController
             }
         }
 
-        return $this->container->get('templating')->renderResponse('AcmeDemoBundle:Index:inscription.html.'.$this->getEngine(), array(
+        return $this->container->get('templating')->renderResponse('AcmeDemoBundle:Index:inscription.html.'.$this->container->getParameter('fos_user.template.engine'), array(
             'form' => $form->createView(),
         ));
     }
